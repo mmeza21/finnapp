@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Oculta el contenido por defecto */
+.contenido {
+  display: none;
+}
+
+</style>
+<body>
+    <button class="boton-collapse" onclick="toggleCollapse()">Mostrar/Ocultar</button>
+<div class="contenido" id="contenido">
+  <p>Este es un contenido que puede colapsarse.</p>
+</div>
+<script>
+    function toggleCollapse() {
+  var contenido = document.getElementById("contenido");
+  contenido.style.display = (contenido.style.display === "block") ? "none" : "block";
+}
+
+</script>
+</body>
+</html>

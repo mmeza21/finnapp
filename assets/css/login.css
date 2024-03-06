@@ -1,0 +1,90 @@
+main{
+  display: grid;
+  grid-template-columns: 35% 65%;
+  height: 100vh;
+}
+.slider{
+background: var(--primaryColor);
+box-shadow: 5px 0 5px rgba(0, 0, 0, 0.10);
+z-index: 1;
+}
+.slider .contentSlider{
+  padding: 16px 32px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr  auto;
+}
+.contentSlider > figure{
+  padding: 16px 32px;
+}
+.contentSlider > div:not(.slide){
+  padding: 0 32px;
+}
+.contentSlider div > h1{
+  color: var(--whiteColor);
+  margin-bottom: 16px;
+}
+
+.contentSlider div > p{
+  color: var(--whiteColor);
+  text-align: justify;
+}
+
+.slider .contentSlider figure > img{
+  width: 72px;
+}
+
+.login:not(.contentFooter){
+  background: var(--primaryBackground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.login .contentLogin{
+  width: 50%;
+  border-radius: 32px;
+  border: 2px solid var(--lightGrayColor);
+  box-shadow: 0px 8px 24px 4px rgba(0, 0, 0, 0.10);
+  padding: 64px 64px;
+}
+.login .contentLogin > h1{
+  text-align: center;
+} 
+.login .contentLogin > h1, label, .boxText, .primaryButton{
+  margin-bottom: 16px;
+}
+
+.contentFooter{
+  width: 100%;
+  height: 70px;
+  background: var(--lightPrimaryColor);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+/* Contenedor vista de clave */
+.contentEyePassword {
+  position: relative;
+}
+
+/* Ojito vista clave*/
+.eyePassword {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 18px;
+  padding-top: 9px;
+  color: var(--primaryColor);
+}
+
+.path {
+  stroke-dasharray: 23;
+  animation: dash 2.5s linear infinite;
+}
+@keyframes dash {
+  to { stroke-dashoffset: -46; }
+}
+svg { width: 20%; }
