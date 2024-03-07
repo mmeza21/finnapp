@@ -1,60 +1,97 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <title>Login | Estados Financieros</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Tablero compuesto de componentes para adminsitrar plantilla." />
-    <meta name="keywords" content="Administración de tablero compuesto de páginas php, JavaScript, CSS, HTML, Bootstrap."/>
-    <meta name="author" content="Manu"/>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema Financieros HCSJD">
+    <meta name="keywords" content="Sistema FInanciero HCSJD">
+    <meta name="author" content="Mmeza">
+    <title>Login - Estados Financieros</title>
     <!-- Favicon icon -->
     <link rel="icon" href="assets/images/logoGranada.png" type="image/x-icon">
-    <!-- fontawesome icon -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
-    <!-- animation css -->
-    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
-    <!-- Login css -->
-    <link rel="stylesheet" href="assets/css/login.css">
-    <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
-
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 
 <body>
-<main>
-    <div class="contenedor">
-        <figure>
-            <img src="assets/images/logoGranada.png" alt="Logo San Pablo">
-        </figure>
-        <div class="form-group">
-            <h1>Estados Financieros</h1>
-        </div>
-        <div class="form-group">
-            <label for="Usuario" class="lblText">Usuario</label>
-            <input type="text" name="" id="" class="boxText" placeholder="Tú Usuario">
-        </div>
-        <div class="form-group">
-            <label for="Clave" class="lblText">Clave</label>
-            <div class="contenedor_vista-clave">
-            <input type="password" name="" id="Txt_Clave" class="boxText" placeholder="Tú clave">
-            <span id="ojo" class="ojo" onclick="toggleClave()"><i class="fas fa-eye text-moradoSanPablo"></i></span>
+    <main>
+        <section class="slider">
+            <div class="contentSlider">
+                <figure>
+                    <img src="assets/images/logoGranadaWhite.png" alt="">
+                </figure>
+                <div>
+                    <h1>Estados Financieros HCSJD</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam ex alias similique numquam odio
+                        cumque laborum assumenda illum eaque tenetur eos, repellendus ipsa dolorem? Quidem doloremque
+                        eligendi perferendis in suscipit?</p>
+                </div>
+                <mark class="highlight">Bienvenido</mark>
+                <div class="slide">
+                    <div class="slide-inner">
+                        <input class="slide-open" type="radio" id="slide-1"
+                            name="slide" aria-hidden="true" hidden="" checked="checked">
+                        <div class="slide-item">
+                            <p>
+                                Con <strong>Lorem ipsum</strong> podrás <strong>reservar, pagar y reprogramar tus citas</strong> presenciales o teleconsultas de <strong>manera fácil y segura.</strong>
+                            </p>
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-2"
+                            name="slide" aria-hidden="true" hidden="">
+                        <div class="slide-item">
+                            <p>
+                                Ingresa a nuestra plataforma <strong>"Lorem ipsum"</strong> y accede a tu información médica <strong>con tan solo un clic.</strong>
+                            </p>
+                        </div>
+                        <input class="slide-open" type="radio" id="slide-3"
+                            name="slide" aria-hidden="true" hidden="">
+                        <div class="slide-item">
+                            <p>
+                                <strong>Atiéndete</strong> con nuestro administrador <strong>desde Lorem ipsum</strong> y accede a nuestras <strong>sedes a nivel nacional</strong> sin importar en cuál de ellas asistas.
+                            </p>
+                        </div>
+                        <label for="slide-3" class="slide-control prev control-1">‹</label>
+                        <label for="slide-2" class="slide-control next control-1">›</label>
+                        <label for="slide-1" class="slide-control prev control-2">‹</label>
+                        <label for="slide-3" class="slide-control next control-2">›</label>
+                        <label for="slide-2" class="slide-control prev control-3">‹</label>
+                        <label for="slide-1" class="slide-control next control-3">›</label>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div clas="form-group">
-            <input type="submit" class="primaryButton" value="Iniciar">
-        </div>
-        <footer>
-            <p>&copy; 2024 - HCSJD</p>
-        </footer>
-    </div>
-</main>
+            
+        </section>
+        <section class="login">
+            <div class="contentLogin">
+                <h1>Inicia sesión</h1>
+                <form action="" method="post" id="formulario">
+                    <label for="txtUser">Usuario*</label>
+                    <input type="text" name="txtUser" id="txtUser" placeholder="Ingresa tu usuario..."
+                        autocomplete="off" class="boxText">
 
-    <!-- JS -->
-    <script src="assets/js/vendor-all.min.js"></script>
-	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/login/ver_clave.js"></script>
+                    <label for="txtPassword">Contraseña*</label>
+                    <div class="contentEyePassword">
+                        <input type="password" name="txtPassword" id="txtPassword"
+                            placeholder="Ingresa tu contraseña..." autocomplete="off" class="boxText">
+                        <span id="eyePassword" class="eyePassword" onclick="toggleClave()"><i
+                                class="fas fa-eye textPrimaryColor"></i></span>
+                    </div>
+                    <button type="submit" class="primaryButton" id="btnLogin" disabled>Ingresar <i
+                            class="fas fa-sign-in-alt"></i></button>
+                </form>
+            </div>
+            <div class="contentFooter">
+                <p>&copy;2024 - Todos los derechos reservados</p>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/showPassword.js"></script>
+    <script src="assets/js/slider.js"></script>
 </body>
+
 </html>
