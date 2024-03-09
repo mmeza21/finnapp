@@ -35,7 +35,7 @@ h3 {
     font-weight: 500;
     line-height: 100%;
 }
-p, label {
+p, .lblText {
     color: var(--primaryColor);
     font-size: 16px;
     font-weight: 400;

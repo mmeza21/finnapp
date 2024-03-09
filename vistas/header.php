@@ -1,8 +1,15 @@
+<?php
+session_start();
+if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
+    header("Location: /finnapp/login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <title>Plantilla | San Pablo</title>
+    <title>Finnapp | Hogar clínica San Juan de Dios</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,7 +18,7 @@
     <meta name="author" content="SP" />
 
     <!-- Favicon icon -->
-    <link rel="icon" href="assets/images/logo_mobile.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/logoGranada.png" type="image/x-icon">
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
     <!-- animation css -->
@@ -41,7 +48,7 @@
                     <div class="b-bg">
                         
                     </div>
-                    <span class="b-title">HSCJD</span>
+                    <span class="b-title">FINNAPP</span>
                 </a>
                 <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
             </div>
@@ -52,7 +59,7 @@
                     </li>
                     <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project"
                         class="nav-item active">
-                        <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
+                        <a href="/finnapp" class="nav-link "><span class="pcoded-micon"><i
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                     </li>
                     <li class="nav-item pcoded-menu-caption">
@@ -158,8 +165,8 @@
                         <div class="dropdown-menu dropdown-menu-right profile-notification">
                             <div class="pro-head">
                                 <img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
-                                <span>Webmaster</span>
-                                <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                <span><?php echo $_SESSION['firts_name'];  ?></span>
+                                <a href="cerrar.php" class="dud-logout" title="Logout">
                                     <i class="feather icon-log-out"></i>
                                 </a>
                             </div>
@@ -170,7 +177,7 @@
                                         Perfil</a></li>
                                 <li><a href="message.html" class="dropdown-item"><i class="feather icon-mail"></i>
                                         Mensajes</a></li>
-                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i>
+                                <li><a href="cerrar.php" class="dropdown-item"><i class="feather icon-lock"></i>
                                         Cerrar sesión</a></li>
                             </ul>
                         </div>

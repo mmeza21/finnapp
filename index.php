@@ -1,4 +1,4 @@
-<?php include ('vistas/header.php'); ?>
+<?php include('vistas/header.php');?>
 <!--
  * CUERPO
  * -------------------------------------------------------------------
@@ -20,4 +20,4 @@
         </div>
     </div>
 </div>
-<?php include ('vistas/footer.php'); ?>
+<?php include ('vistas/footer.php');?>

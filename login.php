@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +19,7 @@
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -69,7 +73,7 @@
         <section class="login">
             <div class="contentLogin">
                 <h1>Inicia sesión</h1>
-                <form action="" method="post" id="formulario">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="formulario">
                     <label for="txtUser">Usuario*</label>
                     <input type="text" name="txtUser" id="txtUser" placeholder="Ingresa tu usuario..."
                         autocomplete="off" class="boxText">
@@ -81,7 +85,7 @@
                         <span id="eyePassword" class="eyePassword" onclick="toggleClave()"><i
                                 class="fas fa-eye textPrimaryColor"></i></span>
                     </div>
-                    <button type="submit" class="primaryButton" id="btnLogin" disabled>Ingresar <i
+                    <button type="submit" class="primaryButton" name="login" id="btnLogin" disabled>Ingresar <i
                             class="fas fa-sign-in-alt"></i></button>
                 </form>
             </div>
@@ -95,3 +99,55 @@
 </body>
 
 </html>
+<?php
+require_once "config/conexion.php";
+if (isset($_POST['login'])) {
+  $txtUser = mysqli_real_escape_string($conn, $_POST['txtUser']);
+  $txtPassword = mysqli_real_escape_string($conn, $_POST['txtPassword']);
+  $result = mysqli_query($conn, "select u.id_user, u.name_user, u.pass_user,u.firts_name, u.last_name, u.email_user, u.state_user, u.id_rol, r.name_rol 
+  from tbl_users u
+  inner join tbl_roles r
+  on
+  u.id_rol = r.id_rol
+  where u.name_user='". $txtUser ."' and u.pass_user='". $txtPassword ."' and u.state_user=1");
+  if ($row = mysqli_fetch_array($result)) {
+    $_SESSION['id_user'] = $row['id_user'];
+    $_SESSION['name_user'] = $row['name_user'];
+    $_SESSION['pass_user'] = $row['pass_user'];
+    $_SESSION['firts_name'] = $row['firts_name'];
+    $_SESSION['last_name'] = $row['last_name'];
+    $_SESSION['state_user'] = $row['state_user'];
+    $_SESSION['id_rol'] = $row['id_rol'];
+    $_SESSION['name_rol'] = $row['name_rol'];
+    echo '<script>
+    Swal.fire({
+        icon:"success",
+        title: "Bienvenido",
+        text: "Error de usuario y/o clave...",
+        type: "success",
+        showConfirmButton: false,
+        timer: 2000,
+        grow:"fullscreen",
+timerProgressBar: true,
+}).then(function(){
+window.location.href = "index";
+});
+    </script>';
+    exit();
+  } else {
+    echo '<script>
+        Swal.fire({
+            icon:"error",
+            title: "Ooops...",
+            text: "Error de usuario y/o clave...",
+            type: "success",
+            showConfirmButton: false,
+            timer: 2000,
+  timerProgressBar: true,
+}).then(function(){
+  window.location.href = "login";
+});
+        </script>';
+  }
+}
+?>
