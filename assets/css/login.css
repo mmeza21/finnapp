@@ -82,6 +82,13 @@ label,
   padding-top: 9px;
   color: var(--primaryColor);
 }
+/* SweetAlert */
+.swal2-styled.swal2-confirm.swalBtnSize {
+  padding: 0.5rem 6rem 0.5rem 6rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
 
 /* Responsive */
 /*Mobile*/

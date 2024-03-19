@@ -1,5 +1,4 @@
-<?php
-session_start();
+<?php session_start();
 if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
     header("Location: /finnapp/login.php");
     exit();
@@ -18,17 +17,24 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
     <meta name="author" content="SP" />
 
     <!-- Favicon icon -->
-    <link rel="icon" href="assets/images/logoGranada.png" type="image/x-icon">
+    <link rel="icon" href="/finnapp/assets/images/logoGranada.png" type="image/x-icon">
     <!-- fontawesome icon -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/finnapp/assets/fonts/fontawesome/css/fontawesome-all.min.css">
     <!-- animation css -->
-    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <link rel="stylesheet" href="/finnapp/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/finnapp/assets/css/style.css">
     <!-- main css -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="/finnapp/assets/css/main.css">
     <!-- Custom css -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="/finnapp/assets/css/custom.css">
+    <!-- Datatable -->
+    <link rel="stylesheet" href="/finnapp/assets/plugins/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/finnapp/assets/css/datatable.css">
+    <!-- Modal -->
+    <link rel="stylesheet" href="/finnapp/assets/css/modal.css">
+    <!-- Sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -44,7 +50,7 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
     <nav class="pcoded-navbar">
         <div class="navbar-wrapper">
             <div class="navbar-brand header-logo">
-                <a href="./" class="b-brand">
+                <a href="/finnapp" class="b-brand">
                     <div class="b-bg">
                         
                     </div>
@@ -63,61 +69,17 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                     </li>
                     <li class="nav-item pcoded-menu-caption">
-                        <label>UI Element</label>
+                        <label>Administración</label>
                     </li>
                     <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds"
                         class="nav-item pcoded-hasmenu">
                         <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-box"></i></span><span class="pcoded-mtext">Components</span></a>
+                                    class="feather icon-box"></i></span><span class="pcoded-mtext">Credenciales</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="bc_button.html" class="">Button</a></li>
-                            <li class=""><a href="bc_badges.html" class="">Badges</a></li>
-                            <li class=""><a href="bc_breadcrumb-pagination.html" class="">Breadcrumb & paggination</a>
-                            </li>
-                            <li class=""><a href="bc_collapse.html" class="">Collapse</a></li>
-                            <li class=""><a href="bc_tabs.html" class="">Tabs & pills</a></li>
-                            <li class=""><a href="bc_typography.html" class="">Typography</a></li>
+                            <li class=""><a href="/finnapp/page/users.php" class="">Usuarios</a></li>
+                            <li class=""><a href="/finnapp/page/rols.php" class="">Roles</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item pcoded-menu-caption">
-                        <label>Forms & table</label>
-                    </li>
-                    <li data-username="form elements advance componant validation masking wizard picker select"
-                        class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-file-text"></i></span><span class="pcoded-mtext">Form
-                                elements</span></a>
-                    </li>
-                    <li data-username="Table bootstrap datatable footable" class="nav-item">
-                        <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-server"></i></span><span class="pcoded-mtext">Table</span></a>
-                    </li>
-                    <li class="nav-item pcoded-menu-caption">
-                        <label>Chart & Maps</label>
-                    </li>
-                    <li data-username="Charts Morris" class="nav-item"><a href="chart-morris.html"
-                            class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-pie-chart"></i></span><span
-                                class="pcoded-mtext">Chart</span></a></li>
-                    <li data-username="Maps Google" class="nav-item"><a href="map-google.html" class="nav-link "><span
-                                class="pcoded-micon"><i class="feather icon-map"></i></span><span
-                                class="pcoded-mtext">Maps</span></a></li>
-                    <li class="nav-item pcoded-menu-caption">
-                        <label>Pages</label>
-                    </li>
-                    <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe"
-                        class="nav-item pcoded-hasmenu">
-                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-lock"></i></span><span
-                                class="pcoded-mtext">Authentication</span></a>
-                        <ul class="pcoded-submenu">
-                            <li class=""><a href="auth-signup.html" class="" target="_blank">Sign up</a></li>
-                            <li class=""><a href="auth-signin.html" class="" target="_blank">Sign in</a></li>
-                        </ul>
-                    </li>
-                    <li data-username="Sample Page" class="nav-item"><a href="sample-page.html" class="nav-link"><span
-                                class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span
-                                class="pcoded-mtext">Sample page</span></a></li>
                 </ul>
             </div>
         </div>
@@ -128,11 +90,11 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
     <header class="navbar pcoded-header navbar-expand-lg navbar-light">
         <div class="m-header">
             <a class="mobile-menu" id="mobile-collapse1" href="javascript:"><span></span></a>
-            <a href="index.html" class="b-brand">
+            <a href="/finnapp" class="b-brand">
                 <div class="b-bg">
-                <img src="assets/images/logo_mobile.png" class="img-fluid">
+                <img src="/finnapp/assets/images/logoGranada.png" class="img-fluid">
                 </div>
-                <span class="b-title">Plantilla</span>
+                <span class="b-title">Finnapp</span>
             </a>
         </div>
         <a class="mobile-menu" id="mobile-header" href="javascript:">
@@ -142,19 +104,6 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
             <ul class="navbar-nav mr-auto">
                 <li><a href="javascript:" class="full-screen" onclick="javascript:toggleFullScreen()"><i
                             class="feather icon-maximize"></i></a></li>
-                <li class="nav-item">
-                    <div class="main-search">
-                        <div class="input-group">
-                            <input type="text" id="m-search" class="form-control" placeholder="Buscar . . .">
-                            <a href="javascript:" class="input-group-append search-close">
-                                <i class="feather icon-x input-group-text"></i>
-                            </a>
-                            <span class="input-group-append search-btn btn btn-primary">
-                                <i class="feather icon-search input-group-text"></i>
-                            </span>
-                        </div>
-                    </div>
-                </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li>
@@ -164,9 +113,9 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-notification">
                             <div class="pro-head">
-                                <img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                                <img src="/finnapp/assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
                                 <span><?php echo $_SESSION['firts_name'];  ?></span>
-                                <a href="cerrar.php" class="dud-logout" title="Logout">
+                                <a href="/finnapp/controller/session.php" class="dud-logout" title="Logout">
                                     <i class="feather icon-log-out"></i>
                                 </a>
                             </div>
@@ -175,9 +124,7 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
                                         Configuración</a></li>
                                 <li><a href="javascript:" class="dropdown-item"><i class="feather icon-user"></i>
                                         Perfil</a></li>
-                                <li><a href="message.html" class="dropdown-item"><i class="feather icon-mail"></i>
-                                        Mensajes</a></li>
-                                <li><a href="cerrar.php" class="dropdown-item"><i class="feather icon-lock"></i>
+                                <li><a href="/finnapp/controller/session.php" class="dropdown-item"><i class="feather icon-lock"></i>
                                         Cerrar sesión</a></li>
                             </ul>
                         </div>
