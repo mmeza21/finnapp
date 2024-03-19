@@ -3,6 +3,45 @@
     padding: 8px 32px;
 }
 
+.modal .modal-dialog .modal-content .modal-header{
+    border-bottom: none;
+}
+.modal .modal-dialog .modal-content .modal-footer{
+    border-top: none;
+}
 .modal .modal-dialog .modal-content .modal-body .row .col{
     margin-bottom: 8px;
 }
+
+  /* Responsive */
+  /*Mobile*/
+  @media (max-width: 480px) {
+    .modal .modal-dialog .modal-content {
+        padding: 8px 16px;
+    }
+  }
+  /* Mobile curvo */
+  @media only screen and (max-width: 600px) {
+
+  }
+  
+  /* Baja resolución de Tablets y iPads */
+  @media (min-width: 481px) and (max-width: 767px) {
+  }
+  
+  /* Tablets iPads (Portrait) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+  }
+  
+  /* Laptops y Desktops */
+  @media (min-width: 1025px) and (max-width: 1280px) {
+
+  
+  }
+  
+  /* Desktops */
+  @media (min-width: 1281px) {
+  
+  }
+  

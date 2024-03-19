@@ -14,7 +14,7 @@
             <div class="pb-4">
             <button class="accentButton" data-toggle="modal" data-target="#registerUsers">Registrar <i class="fas fa-user-plus"></i></button>
             </div>
-            <table class="table" id="mainDataTable">
+            <table class="table table-hover" id="mainDataTable" class="display nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -158,33 +158,33 @@
                                     </div>
                                     <div class="modal-body">
                                     <div class="row">
-                                                <div class="col">
-                                                <label for="txtNameUser" class="lblText">Usuario:</label>
-                                                <input type="text" name="txtNameUser" class="boxText">
+                                                <div class="col col-lg-6 col-12">
+                                                <label for="txtNameUser" class="lblText">Usuario*</label>
+                                                <input type="text" name="txtNameUser" id="txtNameUser" class="boxText" required="true" placeholder="Nombre de usuario" autocomplete="off">
                                                 </div>
-                                                <div class="col">
-                                                <label for="txtPassUser" class="lblText">Clave:</label>
-                                                <input type="password" name="txtPassUser" class="boxText">
+                                                <div class="col col-lg-6 col-12">
+                                                <label for="txtPassUser" class="lblText">Clave*</label>
+                                                <input type="password" name="txtPassUser" id="txtPassUser" class="boxText" required="true" placeholder="Clave de usuario" autocomplete="off">
                                                 </div>
                                                 </div>
                                                 <div class="row">
-                                                <div class="col">
-                                                <label for="txtFirtsName" class="lblText">Nombres:</label>
-                                                <input type="email" name="txtFirtsName" class="boxText" required="true">
+                                                <div class="col col-lg-6 col-12">
+                                                <label for="txtFirtsName" class="lblText">Nombres*</label>
+                                                <input type="email" name="txtFirtsName" id="txtFirtsName" class="boxText" required="true" placeholder="Nombres completos" autocomplete="off">
                                                 </div>
-                                                <div class="col">
+                                                <div class="col col-lg-6 col-12">
                                                 <label for="txtLastName" class="lblText">Apellidos:</label>
-                                                <input type="text" name="txtLastName" class="boxText" required="true">
+                                                <input type="text" name="txtLastName" id="txtLastName" class="boxText" required="true" placeholder="Apellidos completos" autocomplete="off">
                                                 </div>
                                                 </div>
                                                 <div class="row">
-                                                <div class="col">
+                                                <div class="col col-lg-12 col-12">
                                                 <label for="txtEmailUser" class="lblText">Email:</label>
-                                                <input type="email" name="txtEmailUser" class="boxText" required="true">  
+                                                <input type="email" name="txtEmailUser" id="txtEmailUser" class="boxText" required="true" placeholder="Email de usuario" autocomplete="off">  
                                                 </div>
                                                 </div>
                                                 <div class="row">
-                                                <div class="col">
+                                                <div class="col col-lg-6 col-12">
                                                     <label for="sltNameRol" class="lblText">Rol</label>
                                                     <select id="sltNameRol" name="sltNameRol" class="sltOption" required>
                                                     <option value="" selected disabled hidden>Seleccione rol...</option>
@@ -218,14 +218,15 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                     </tr>
                 </tfoot>
             </table>

@@ -29,7 +29,8 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
     <!-- Custom css -->
     <link rel="stylesheet" href="/finnapp/assets/css/custom.css">
     <!-- Datatable -->
-    <link rel="stylesheet" href="/finnapp/assets/plugins/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.0/css/responsive.dataTables.css">
     <link rel="stylesheet" href="/finnapp/assets/css/datatable.css">
     <!-- Modal -->
     <link rel="stylesheet" href="/finnapp/assets/css/modal.css">
@@ -52,7 +53,7 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
             <div class="navbar-brand header-logo">
                 <a href="/finnapp" class="b-brand">
                     <div class="b-bg">
-                        
+                    <img src="../assets/images/logoGranada.png" class="img-fluid">
                     </div>
                     <span class="b-title">FINNAPP</span>
                 </a>

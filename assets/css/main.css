@@ -38,7 +38,7 @@ h3 {
 p, .lblText {
     color: var(--primaryColor);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 150%;
 }
 .highlight {
@@ -89,6 +89,24 @@ p, .lblText {
     border: 1px solid var(--accentColor);
     transition: 1s;
 }
+
+/* TEXTAREA */
+.boxTextArea{
+    color: var(--primaryColor);
+    border: none;
+    background: var(--lightPrimaryColor);
+    border-radius: 12px;
+    width: 100%;
+    height: 126px;
+    padding: 9px 21px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
 /* Desplegable */
 .sltOption{
     color: var(--primaryColor);
@@ -134,14 +152,15 @@ p, .lblText {
 }
 /* Secondary Button*/
 .secondaryButton{
-    background: var(--secondaryColor);
-    color: var(--whiteColor);
+    background: var(--whiteColor);
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
     font-weight: 600;
-    border: none;
     border-radius: 12px;
     height: 42px;
     width: 132px;
     transition: 1s;
+    cursor: pointer;
 }
 /* Accent Button*/
 .accentButton{
@@ -153,6 +172,7 @@ p, .lblText {
     height: 42px;
     width: 132px;
     transition: 1s;
+    cursor: pointer;
 }
 
 /* 04. ACTION */
@@ -161,16 +181,21 @@ p, .lblText {
     color: var(--whiteColor);
     border: none;
     border-radius: 8px;
+    padding: 8px;
     height: 40px;
     width: 40px;
     cursor: pointer;
+    text-align: center;
 }
+
 .deleteAction{
-    background: var(--redColor);
-    color: var(--whiteColor);
-    border: none;
-    border-radius: 8px;
     height: 40px;
     width: 40px;
+    border: 2px solid var(--accentColor);
+    color: var(--accentColor);
+    padding: 8px;
+    background: var(--whiteColor);
+    border-radius: 8px;
+    text-align: center;
     cursor: pointer;
 }
