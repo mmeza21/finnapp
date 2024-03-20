@@ -26,6 +26,7 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
     <link rel="stylesheet" href="/finnapp/assets/css/style.css">
     <!-- main css -->
     <link rel="stylesheet" href="/finnapp/assets/css/main.css">
+    <link rel="stylesheet" href="/finnapp/assets/css/global.css">
     <!-- Custom css -->
     <link rel="stylesheet" href="/finnapp/assets/css/custom.css">
     <!-- Datatable -->

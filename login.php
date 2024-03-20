@@ -18,7 +18,7 @@
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -37,25 +37,28 @@
                 <mark class="highlight">Bienvenido</mark>
                 <div class="slide">
                     <div class="slide-inner">
-                        <input class="slide-open" type="radio" id="slide-1"
-                            name="slide" aria-hidden="true" hidden="" checked="checked">
+                        <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden=""
+                            checked="checked">
                         <div class="slide-item">
                             <p>
-                                Con <strong>Lorem ipsum</strong> podrás <strong>reservar, pagar y reprogramar tus citas</strong> presenciales o teleconsultas de <strong>manera fácil y segura.</strong>
+                                Con <strong>Lorem ipsum</strong> podrás <strong>reservar, pagar y reprogramar tus
+                                    citas</strong> presenciales o teleconsultas de <strong>manera fácil y
+                                    segura.</strong>
                             </p>
                         </div>
-                        <input class="slide-open" type="radio" id="slide-2"
-                            name="slide" aria-hidden="true" hidden="">
+                        <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
                         <div class="slide-item">
                             <p>
-                                Ingresa a nuestra plataforma <strong>"Lorem ipsum"</strong> y accede a tu información médica <strong>con tan solo un clic.</strong>
+                                Ingresa a nuestra plataforma <strong>"Lorem ipsum"</strong> y accede a tu información
+                                médica <strong>con tan solo un clic.</strong>
                             </p>
                         </div>
-                        <input class="slide-open" type="radio" id="slide-3"
-                            name="slide" aria-hidden="true" hidden="">
+                        <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
                         <div class="slide-item">
                             <p>
-                                <strong>Atiéndete</strong> con nuestro administrador <strong>desde Lorem ipsum</strong> y accede a nuestras <strong>sedes a nivel nacional</strong> sin importar en cuál de ellas asistas.
+                                <strong>Atiéndete</strong> con nuestro administrador <strong>desde Lorem ipsum</strong>
+                                y accede a nuestras <strong>sedes a nivel nacional</strong> sin importar en cuál de
+                                ellas asistas.
                             </p>
                         </div>
                         <label for="slide-3" class="slide-control prev control-1">‹</label>
@@ -67,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
         <section class="login">
             <div class="contentLogin">
@@ -96,5 +99,6 @@
     <script src="assets/js/showPassword.js"></script>
     <script src="assets/js/slider.js"></script>
 </body>
+
 </html>
 <?php include('controller/access.php');?>

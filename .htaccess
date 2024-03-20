@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Para redireccionar URLs sin extensión a URLs con .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Para redireccionar URLs sin extensión a URLs con .html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

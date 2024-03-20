@@ -1,0 +1,14 @@
+/* Contenedor vista de clave */
+.contentEyePassword {
+    position: relative;
+  }
+  
+  /* Ojito vista clave*/
+  .eyePassword {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 18px;
+    padding-top: 9px;
+    color: var(--primaryColor);
+  }
