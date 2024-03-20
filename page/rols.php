@@ -19,8 +19,8 @@
                     <tr>
                         <th>Código</th>
                         <th>Nombre</th>
-                        <th>Descripción</th>
                         <th>Estado</th>
+                        <th>Descripción</th>
                         <th>Acción</th>
                     </tr>
                 </thead>

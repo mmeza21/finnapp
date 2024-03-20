@@ -32,7 +32,7 @@
                     <?php
         
                             $sql = "
-                            SELECT u.id_user, u.name_user, u.pass_user, u.firts_name, u.last_name, u.email_user, u.state_user, r.id_rol, r.name_rol  from tbl_users u
+                            SELECT u.id_user, u.name_user, u.pass_user, u.firts_name, u.last_name, u.email_user, u.statte_user, r.id_rol, r.name_rol  from tbl_users u
                             INNER JOIN tbl_rols r
                             ON
                             u.id_rol = r.id_rol";
@@ -44,7 +44,7 @@
                                 $firtsName=$row["firts_name"];
                                 $LastName=$row["last_name"];
                                 $emailUser=$row["email_user"];
-                                $stateUser=$row["state_user"];
+                                $statteUser=$row["statte_user"];
                                 $idRol=$row["id_rol"];
                                 $nameRol=$row["name_rol"];
                                 ?>
@@ -55,12 +55,10 @@
                                     <td><?php echo $firtsName; ?></td>
                                     <td><?php echo $LastName; ?></td>
                                     <td><?php echo $emailUser; ?></td>
-                                    <td><?php echo $stateUser; ?></td>
+                                    <td><?php echo $statteUser; ?></td>
                                     <td><?php echo $nameRol; ?></td>
                                     <td>
-                                    <button type="button" class="deleteAction" data-toggle="modal" data-target="#deleteUser<?php echo $idUser; ?>">
-                                <i class="fas fa-user-times"></i>
-                              </button>
+                                    <a href="/finnapp/controller/deleteUsers?idUser=<?php echo $idUser; ?>" class="deleteAction"><i class="fas fa-trash-alt"></i></a>
                               
                               <button type="button" class="editAction" data-toggle="modal" data-target="#editUsers<?php echo $idUser; ?>">
                                <i class="fas fa-user-edit"></i>
@@ -79,34 +77,32 @@
                                         <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <form method="POST" action="recib_Update.php">
-                                        <input type="hidden" name="id" value="<?php echo $idUser; ?>">
-
+                                    <form method="POST" action="../controller/getAdministration.php">
                                             <div class="modal-body">
                                                 <div class="row">
                                                 <div class="col">
                                                 <label for="txtNameUser" class="lblText">Usuario:</label>
-                                                <input type="text" name="txtNameUser" class="boxText" value="<?php echo $nameUser; ?>" disabled>
+                                                <input type="text" name="txtNameUser" class="boxText" value="<?php echo $nameUser; ?>" readonly>
                                                 </div>
                                                 <div class="col">
                                                 <label for="txtPassUser" class="lblText">Clave:</label>
-                                                <input type="password" name="txtPassUser" class="boxText" value="<?php echo $passUser; ?>">
+                                                <input type="password" name="txtPassUser" class="boxText" value="<?php echo $passUser; ?>" autocomplete="off">
                                                 </div>
                                                 </div>
                                                 <div class="row">
                                                 <div class="col">
                                                 <label for="txtFirtsName" class="lblText">Nombres:</label>
-                                                <input type="email" name="txtFirtsName" class="boxText" value="<?php echo $firtsName; ?>" required="true">
+                                                <input type="text" name="txtFirtsName" class="boxText" value="<?php echo $firtsName; ?>" required="true" autocomplete="off">
                                                 </div>
                                                 <div class="col">
                                                 <label for="txtLastName" class="lblText">Apellidos:</label>
-                                                <input type="text" name="txtLastName" class="boxText" value="<?php echo $LastName; ?>" required="true">
+                                                <input type="text" name="txtLastName" class="boxText" value="<?php echo $LastName; ?>" required="true" autocomplete="off">
                                                 </div>
                                                 </div>
                                                 <div class="row">
                                                 <div class="col">
                                                 <label for="txtEmailUser" class="lblText">Email:</label>
-                                                <input type="email" name="txtEmailUser" class="boxText" value="<?php echo $emailUser; ?>" required="true">  
+                                                <input type="email" name="txtEmailUser" class="boxText" value="<?php echo $emailUser; ?>" required="true" autocomplete="off">  
                                                 </div>
                                                 </div>
                                                 <div class="row">
@@ -129,16 +125,16 @@
                                                     </div>
                                                     <div class="col">
                                                         <label for="sltStateUser" class="lblText">Estado</label>
-                                                    <select name="sltStateUser" id="" class="sltOption">
-                                                <option value="<?php echo $row['state_user']; ?>"><?php echo $row['state_user'] == '1' ? 'Activo' : 'Inactivo' ?></option>
-                                                <option value="<?php echo  $row['state_user'] == '1' ? '0' : '1' ?>"><?php echo $row['state_user'] == '1' ? 'Inactivo' : 'ACTIVO' ?></option>
+                                                    <select name="sltStateUser" id="sltStateUser" class="sltOption">
+                                                <option value="<?php echo $row['statte_user']; ?>"><?php echo $row['statte_user'] == '1' ? 'Activo' : 'Inactivo' ?></option>
+                                                <option value="<?php echo  $row['statte_user'] == '1' ? '0' : '1' ?>"><?php echo $row['statte_user'] == '1' ? 'Inactivo' : 'ACTIVO' ?></option>
                                             </select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
                                             <button type="button" class="secondaryButton" data-dismiss="modal">Cerrar</button>
-                                            <button type="submit" class="accentButton">Guardar</button>
+                                            <button type="submit" class="accentButton" name="editUsers">Guardar</button>
                                             </div>
                                     </form>
 
@@ -156,6 +152,7 @@
                                         <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
+                                    <form method="POST" action="../controller/getAdministration.php">
                                     <div class="modal-body">
                                     <div class="row">
                                                 <div class="col col-lg-6 col-12">
@@ -170,7 +167,7 @@
                                                 <div class="row">
                                                 <div class="col col-lg-6 col-12">
                                                 <label for="txtFirtsName" class="lblText">Nombres*</label>
-                                                <input type="email" name="txtFirtsName" id="txtFirtsName" class="boxText" required="true" placeholder="Nombres completos" autocomplete="off">
+                                                <input type="text" name="txtFirtsName" id="txtFirtsName" class="boxText" required="true" placeholder="Nombres completos" autocomplete="off">
                                                 </div>
                                                 <div class="col col-lg-6 col-12">
                                                 <label for="txtLastName" class="lblText">Apellidos:</label>
@@ -178,12 +175,10 @@
                                                 </div>
                                                 </div>
                                                 <div class="row">
-                                                <div class="col col-lg-12 col-12">
+                                                <div class="col col-lg-6 col-12">
                                                 <label for="txtEmailUser" class="lblText">Email:</label>
                                                 <input type="email" name="txtEmailUser" id="txtEmailUser" class="boxText" required="true" placeholder="Email de usuario" autocomplete="off">  
                                                 </div>
-                                                </div>
-                                                <div class="row">
                                                 <div class="col col-lg-6 col-12">
                                                     <label for="sltNameRol" class="lblText">Rol</label>
                                                     <select id="sltNameRol" name="sltNameRol" class="sltOption" required>
@@ -201,13 +196,13 @@
                                                 ?>
                                             </select>
                                                     </div>
-            
-                                    </div>
+                                                </div>
                                     <div class="modal-footer">
                                     <button type="button" class="secondaryButton" data-dismiss="modal">Cerrar</button>
-                                            <button type="submit" class="accentButton">Guardar</button>
+                                            <button type="submit" class="accentButton" name="saveUsers">Guardar</button>
                                     </div>
                                     </div>
+                                    </form>
                                 </div>
                                 </div>
                                 </div>
