@@ -73,5 +73,46 @@ else if (isset($_POST['saveUsers'])) {
   }
   header('Location: /finnapp/page/users');
   }  
+/*Guardar CSV*/
+else if (isset($_POST['saveResults'])) {
 
+  $tipo       = $_FILES['dataCliente']['type'];
+$tamanio    = $_FILES['dataCliente']['size'];
+$archivotmp = $_FILES['dataCliente']['tmp_name'];
+$lineas     = file($archivotmp);
+
+$i = 0;
+
+foreach ($lineas as $linea) {
+    $cantidad_registros = count($lineas);
+    $cantidad_regist_agregados =  ($cantidad_registros - 1);
+
+    if ($i != 0) {
+
+        $datos = explode(";", $linea);
+       
+        $nameRol                = !empty($datos[0])  ? ($datos[0]) : '';
+		    $descRol                = !empty($datos[1])  ? ($datos[1]) : '';
+        $statteRol               = !empty($datos[2])  ? ($datos[2]) : '';
+       
+    $insertar = "INSERT INTO tbl_rols( 
+            name_rol,
+			      desc_rol,
+            statte_rol
+        ) VALUES(
+            '$nameRol',
+			'$descRol',
+            '$statteRol'
+        )";
+        mysqli_query($conn, $insertar);
+    }
+
+      echo '<div>'. $i. "). " .$linea.'</div>';
+    $i++;
+}
+
+
+  echo '<p style="text-aling:center; color:#333;">Total de Registros: '. $cantidad_regist_agregados .'</p>';
+
+}
 ?>

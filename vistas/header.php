@@ -82,6 +82,21 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
                             <li class=""><a href="/finnapp/page/rols.php" class="">Roles</a></li>
                         </ul>
                     </li>
+                    <!-- -->
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Estados financieros</label>
+                    </li>
+                    <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe"
+                        class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-pie-chart"></i></span><span
+                                class="pcoded-mtext">Resultados</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="/finnapp/page/results" class="">Registro</a></li>
+                            <li class=""><a href="auth-signin.html" class="">Sign in</a></li>
+                        </ul>
+                    </li>
+                    <!-- -->
                 </ul>
             </div>
         </div>
