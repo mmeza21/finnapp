@@ -13,7 +13,7 @@
             <div class="card-block">
             <form action="../controller/getAdministration.php" method="POST" enctype="multipart/form-data"/>
         <div class="">
-            <input  type="file" name="dataCliente" id="file-input" class="file-input__input" required>
+            <input  type="file" name="dataResult" id="file-input" class="file-input__input" required>
             <label class="file-input__label" for="file-input">
               <i class="zmdi zmdi-upload zmdi-hc-2x"></i>
               <span>Elegir Archivo Excel</span></label
