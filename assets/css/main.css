@@ -174,7 +174,10 @@ p, .lblText {
     transition: 1s;
     cursor: pointer;
 }
-
+/* File button */
+.primaryFile{
+    
+}
 /* 04. ACTION */
 .editAction{
     background: var(--accentColor);

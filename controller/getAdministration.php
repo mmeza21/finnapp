@@ -96,35 +96,38 @@ foreach ($lineas as $linea) {
         $coLabCost = !empty($datos[6])  ? ($datos[6]) : '';
 		    $coImageCost = !empty($datos[7])  ? ($datos[7]) : '';
         $coIntercenterOhsjdCost = !empty($datos[8])  ? ($datos[8]) : '';
-        $gaBankExpenses = !empty($datos[9])  ? ($datos[9]) : '';
-		    $gaVariousAdminSalesExpenses = !empty($datos[10])  ? ($datos[10]) : '';
-        $gaContributionsCuriaCommunityExpenses = !empty($datos[11])  ? ($datos[11]) : '';
-        $gaTrialLegalExpenses = !empty($datos[12])  ? ($datos[12]) : '';
-		    $gaPortfolioImpairmentProvision = !empty($datos[13])  ? ($datos[13]) : '';
-        $gaInventoryImpairrmentProvision = !empty($datos[14])  ? ($datos[14]) : '';
-        $gaOtherLowAssetProvision = !empty($datos[15])  ? ($datos[15]) : '';
-		    $otherNoOperatingIncome = !empty($datos[16])  ? ($datos[16]) : '';
-        $otherNoOperatingExpenses = !empty($datos[17])  ? ($datos[17]) : '';
-        $interestEarnedNetExchangeDifference = !empty($datos[18])  ? ($datos[19]) : '';
-		    $interestPaidThirdPartiesBank = !empty($datos[20])  ? ($datos[20]) : '';
-        $coIntercenterOhsjdCost = !empty($datos[21])  ? ($datos[21]) : '';
-        $interestPaidOhsjd = !empty($datos[22])  ? ($datos[22]) : '';
-		    $sfCashBank = !empty($datos[23])  ? ($datos[23]) : '';
-        $sfAccountsReceivable = !empty($datos[24])  ? ($datos[24]) : '';
-        $sfInventory = !empty($datos[25])  ? ($datos[25]) : '';
-		    $sfOtherCurrentAsset = !empty($datos[26])  ? ($datos[26]) : '';
-        $sfNonCurrentInvestment = !empty($datos[27])  ? ($datos[27]) : '';
-        $sfPropertyPlantEquipment = !empty($datos[28])  ? ($datos[28]) : '';
-		    $sfOtherAsset = !empty($datos[29])  ? ($datos[29]) : '';
-        $sfAccountPayableBusinessDebt = !empty($datos[30])  ? ($datos[30]) : '';
-        $sfBankDebtFinancialObligation = !empty($datos[31])  ? ($datos[31]) : '';
-		    $sfSocialDebtRemSocialBurdens = !empty($datos[32])  ? ($datos[32]) : '';
-        $sfAccountPayableOhcsjd = !empty($datos[33])  ? ($datos[33]) : '';
-        $sfOtherCurrentLiabilities = !empty($datos[34])  ? ($datos[34]) : '';
-        $sfBankDebtLpLoans = !empty($datos[35])  ? ($datos[35]) : '';
-        $sfTaxSocialDebt = !empty($datos[36])  ? ($datos[36]) : '';
-		    $sfForecasts = !empty($datos[37])  ? ($datos[37]) : '';
-        $sfOtherPassive = !empty($datos[38])  ? ($datos[38]) : '';
+        $coOtherCost = !empty($datos[9])  ? ($datos[9]) : '';
+        $gaPersonAdminExpenses = !empty($datos[10])  ? ($datos[10]) : '';
+        $gaProfessionalFees = !empty($datos[11])  ? ($datos[11]) : '';
+        $gaBankExpenses = !empty($datos[12])  ? ($datos[12]) : '';
+		    $gaVariousAdminSalesExpenses = !empty($datos[13])  ? ($datos[13]) : '';
+        $gaContributionsCuriaCommunityExpenses = !empty($datos[14])  ? ($datos[14]) : '';
+        $gaTrialLegalExpenses = !empty($datos[15])  ? ($datos[15]) : '';
+		    $gaPortfolioImpairmentProvision = !empty($datos[16])  ? ($datos[16]) : '';
+        $gaInventoryImpairrmentProvision = !empty($datos[17])  ? ($datos[17]) : '';
+        $gaOtherLowAssetProvision = !empty($datos[18])  ? ($datos[18]) : '';
+		    $otherNoOperatingIncome = !empty($datos[19])  ? ($datos[19]) : '';
+        $otherNoOperatingExpenses = !empty($datos[20])  ? ($datos[20]) : '';
+        $interestEarnedNetExchangeDifference = !empty($datos[21])  ? ($datos[21]) : '';
+		    $interestPaidThirdPartiesBank = !empty($datos[22])  ? ($datos[22]) : '';
+        $coIntercenterOhsjdCost = !empty($datos[23])  ? ($datos[23]) : '';
+        $interestPaidOhsjd = !empty($datos[24])  ? ($datos[24]) : '';
+		    $sfCashBank = !empty($datos[25])  ? ($datos[25]) : '';
+        $sfAccountsReceivable = !empty($datos[26])  ? ($datos[26]) : '';
+        $sfInventory = !empty($datos[27])  ? ($datos[27]) : '';
+		    $sfOtherCurrentAsset = !empty($datos[28])  ? ($datos[28]) : '';
+        $sfNonCurrentInvestment = !empty($datos[29])  ? ($datos[29]) : '';
+        $sfPropertyPlantEquipment = !empty($datos[30])  ? ($datos[30]) : '';
+		    $sfOtherAsset = !empty($datos[31])  ? ($datos[31]) : '';
+        $sfAccountPayableBusinessDebt = !empty($datos[32])  ? ($datos[32]) : '';
+        $sfBankDebtFinancialObligation = !empty($datos[33])  ? ($datos[33]) : '';
+		    $sfSocialDebtRemSocialBurdens = !empty($datos[34])  ? ($datos[34]) : '';
+        $sfAccountPayableOhcsjd = !empty($datos[35])  ? ($datos[35]) : '';
+        $sfOtherCurrentLiabilities = !empty($datos[36])  ? ($datos[36]) : '';
+        $sfBankDebtLpLoans = !empty($datos[37])  ? ($datos[37]) : '';
+        $sfTaxSocialDebt = !empty($datos[38])  ? ($datos[38]) : '';
+		    $sfForecasts = !empty($datos[39])  ? ($datos[39]) : '';
+        $sfOtherPassive = !empty($datos[40])  ? ($datos[40]) : '';
 
        
     $insertar = "INSERT INTO tbl_results( 
@@ -169,46 +172,46 @@ foreach ($lineas as $linea) {
             sf_forecasts,
             sf_other_passive
         ) VALUES(
-            $coPersonCost,
-			      $coMedicalFees,
-            $coMedicationCost,
-            $coMaterialCost,
-            $coMaintenance,
-            $coInvestigationCost,
-            $coLabCost,
-            $coImageCost,
-            $coIntercenterOhsjdCost,
-            $coOtherCost,
-            $gaPersonAdminExpenses,
-            $gaProfessionalFees,
-            $gaBankExpenses,
-            $gaVariousAdminSalesExpenses,
-            $gaContributionsCuriaCommunityExpenses,
-            $gaTrialLegalExpenses,
-            $gaPortfolioImpairmentProvision,
-            $gaInventoryImpairrmentProvision,
-            $gaOtherLowAssetProvision,
-            $otherNoOperatingIncome,
-            $otherNoOperatingExpenses,
-            $interestEarnedNetExchangeDifference,
-            $interestPaidThirdPartiesBank,
-            $interestPaidOhsjd,
-            $sfCashBank,
-            $sfAccountsReceivable,
-            $sfInventory,
-            $sfOtherCurrentAsset,
-            $sfNonCurrentInvestment,
-            $sfPropertyPlantEquipment,
-            $sfOtherAsset,
-            $sfAccountPayableBusinessDebt,
-            $sfBankDebtFinancialObligation,
-            $sfSocialDebtRemSocialBurdens,
-            $sfAccountPayableOhcsjd,
-            $sfOtherCurrentLiabilities,
-            $sfBankDebtLpLoans,
-            $sfTaxSocialDebt,
-            $sfForecasts,
-            $sfOtherPassive
+            '$coPersonCost',
+			      '$coMedicalFees',
+            '$coMedicationCost',
+            '$coMaterialCost',
+            '$coMaintenance',
+            '$coInvestigationCost',
+            '$coLabCost',
+            '$coImageCost',
+            '$coIntercenterOhsjdCost',
+            '$coOtherCost',
+            '$gaPersonAdminExpenses',
+            '$gaProfessionalFees',
+            '$gaBankExpenses',
+            '$gaVariousAdminSalesExpenses',
+            '$gaContributionsCuriaCommunityExpenses',
+            '$gaTrialLegalExpenses',
+            '$gaPortfolioImpairmentProvision',
+            '$gaInventoryImpairrmentProvision',
+            '$gaOtherLowAssetProvision',
+            '$otherNoOperatingIncome',
+            '$otherNoOperatingExpenses',
+            '$interestEarnedNetExchangeDifference',
+            '$interestPaidThirdPartiesBank',
+            '$interestPaidOhsjd',
+            '$sfCashBank',
+            '$sfAccountsReceivable',
+            '$sfInventory',
+            '$sfOtherCurrentAsset',
+            '$sfNonCurrentInvestment',
+            '$sfPropertyPlantEquipment',
+            '$sfOtherAsset',
+            '$sfAccountPayableBusinessDebt',
+            '$sfBankDebtFinancialObligation',
+            '$sfSocialDebtRemSocialBurdens',
+            '$sfAccountPayableOhcsjd',
+            '$sfOtherCurrentLiabilities',
+            '$sfBankDebtLpLoans',
+            '$sfTaxSocialDebt',
+            '$sfForecasts',
+            '$sfOtherPassive'
         )";
         mysqli_query($conn, $insertar);
     }
