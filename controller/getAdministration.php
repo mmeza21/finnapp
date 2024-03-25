@@ -74,7 +74,7 @@ else if (isset($_POST['saveUsers'])) {
   header('Location: /finnapp/page/users');
   }  
 /*Guardar CSV*/
-else if (isset($_POST['saveResults'])) {
+else if (isset($_POST['saveUploads'])) {
 $tipo       = $_FILES['dataResult']['type'];
 $tamanio    = $_FILES['dataResult']['size'];
 $archivotmp = $_FILES['dataResult']['tmp_name'];
@@ -221,7 +221,7 @@ foreach ($lineas as $linea) {
 }
 
 
-  echo '<p style="text-aling:center; color:#333;">Total de Registros: '. $cantidad_regist_agregados .'</p>';
-
+  // echo '<p style="text-aling:center; color:#333;">Total de Registros: '. $cantidad_regist_agregados .'</p>';
+  header('Location: /finnapp/page/uploads');
 }
 ?>

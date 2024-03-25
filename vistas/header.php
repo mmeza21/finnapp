@@ -92,8 +92,8 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
                                     class="feather icon-pie-chart"></i></span><span
                                 class="pcoded-mtext">Resultados</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="/finnapp/page/results" class="">Registro</a></li>
-                            <li class=""><a href="auth-signin.html" class="">Sign in</a></li>
+                            <li class=""><a href="/finnapp/page/uploads" class="">Cargas</a></li>
+                            <li class=""><a href="/finnapp/page/results" class="">Resultados</a></li>
                         </ul>
                     </li>
                     <!-- -->
