@@ -78,12 +78,12 @@
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="formulario">
                     <label for="txtUser">Usuario*</label>
                     <input type="text" name="txtUser" id="txtUser" placeholder="Ingresa tu usuario..."
-                        autocomplete="off" class="boxText" value="mmeza">
+                        autocomplete="off" class="boxText" require>
 
                     <label for="txtPassword">Contraseña*</label>
                     <div class="contentEyePassword">
                         <input type="password" name="txtPassword" id="txtPassword"
-                            placeholder="Ingresa tu contraseña..." autocomplete="off" class="boxText" value="admi">
+                            placeholder="Ingresa tu contraseña..." autocomplete="off" class="boxText" require>
                         <span id="eyePassword" class="eyePassword" onclick="toggleClave()"><i
                                 class="fas fa-eye textPrimaryColor"></i></span>
                     </div>
@@ -92,7 +92,7 @@
                 </form>
             </div>
             <div class="contentFooter">
-                <p>&copy;2024 - Todos los derechos reservados</p>
+                <p>&copy;<?php echo date("Y"); ?> - Todos los derechos reservados</p>
             </div>
         </section>
     </main>

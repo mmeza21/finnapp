@@ -1476,7 +1476,8 @@ p.text-muted {
           align-items: center;
 }
 .b-brand .b-bg {
-  background: var(--whiteColor);
+  /* background: var(--whiteColor); */
+  background: var(--accentColor);
   border-radius: 10px;
   width: 35px;
   height: 35px;
@@ -10491,6 +10492,7 @@ div.code-toolbar > .toolbar span:hover {
 
 
 .fixed-button {
+  display: none;
 	position: fixed;
 	bottom: -50px;
 	right: 30px;

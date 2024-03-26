@@ -54,7 +54,7 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
             <div class="navbar-brand header-logo">
                 <a href="/finnapp" class="b-brand">
                     <div class="b-bg">
-                    <img src="../assets/images/logoGranada.png" class="img-fluid">
+                    <i class="fas fa-tachometer-alt"></i>
                     </div>
                     <span class="b-title">FINNAPP</span>
                 </a>
@@ -109,7 +109,7 @@ if (!isset($_SESSION['id_user']) || $_SESSION['id_user'] == "") {
             <a class="mobile-menu" id="mobile-collapse1" href="javascript:"><span></span></a>
             <a href="/finnapp" class="b-brand">
                 <div class="b-bg">
-                <img src="/finnapp/assets/images/logoGranada.png" class="img-fluid">
+                <i class="fas fa-tachometer-alt"></i>
                 </div>
                 <span class="b-title">Finnapp</span>
             </a>

@@ -224,4 +224,68 @@ foreach ($lineas as $linea) {
   // echo '<p style="text-aling:center; color:#333;">Total de Registros: '. $cantidad_regist_agregados .'</p>';
   header('Location: /finnapp/page/uploads');
 }
+/*Editar Results*/
+else if (isset($_POST['editResults'])) {
+  echo $txtIdResult = $_POST['txtIdResult'];
+  echo $txtCoPersonCost = $_POST['txtCoPersonCost'];
+  echo $txtCoMedicalFees = $_POST['txtCoMedicalFees'];
+  echo $txtCoMedicationCost = $_POST['txtCoMedicationCost'];
+  echo $txtCoMaterialCost = $_POST['txtCoMaterialCost'];
+  echo $txtCoMaintenance = $_POST['txtCoMaintenance'];
+  echo $txtCoInvestigationCost = $_POST['txtCoInvestigationCost'];
+  echo $txtCoLabCost = $_POST['txtCoLabCost'];
+  echo $txtCoImageCost = $_POST['txtCoImageCost'];
+  echo $txtCoIntercenterOhsjdCost = $_POST['txtCoIntercenterOhsjdCost'];
+  echo $txtCoOtherCost = $_POST['txtCoOtherCost'];
+  echo $txtGaPersonAdminExpenses = $_POST['txtGaPersonAdminExpenses'];
+  echo $txtGaProfessionalFees = $_POST['txtGaProfessionalFees'];
+  echo $txtGaBankExpenses = $_POST['txtGaBankExpenses'];
+  echo $txtGaVariousAdminSalesExpenses = $_POST['txtGaVariousAdminSalesExpenses'];
+  echo $txtGaContributionsCuriaCommunityExpenses = $_POST['txtGaContributionsCuriaCommunityExpenses'];
+  echo $txtGaTrialLegalExpenses = $_POST['txtGaTrialLegalExpenses'];
+  echo $txtGaPortfolioImpairmentProvision = $_POST['txtGaPortfolioImpairmentProvision'];
+  echo $txtGaInventoryImpairrmentProvision = $_POST['txtGaInventoryImpairrmentProvision'];
+  echo $txtGaOtherLowAssetProvision = $_POST['txtGaOtherLowAssetProvision'];
+  echo $txtOtherNoOperatingIncome = $_POST['txtOtherNoOperatingIncome'];
+  echo $txtOtherNoOperatingExpenses = $_POST['txtOtherNoOperatingExpenses'];
+  echo $txtInterestEarnedNetExchangeDifference = $_POST['txtInterestEarnedNetExchangeDifference'];
+  echo $txtInterestPaidThirdPartiesBank = $_POST['txtInterestPaidThirdPartiesBank'];
+  echo $txtInterestPaidOhsjd = $_POST['txtInterestPaidOhsjd'];
+  echo $txtSfCashBank = $_POST['txtSfCashBank'];
+  echo $txtSfAccountsReceivable = $_POST['txtSfAccountsReceivable'];
+  echo $txtSfInventory = $_POST['txtSfInventory'];
+  echo $txtSfOtherCurrentAsset = $_POST['txtSfOtherCurrentAsset'];
+  echo $txtSfNonCurrentInvestment = $_POST['txtSfNonCurrentInvestment'];
+  echo $txtSfPropertyPlantEquipment = $_POST['txtSfPropertyPlantEquipment'];
+  echo $txtSfOtherAsset = $_POST['txtSfOtherAsset'];
+  echo $txtSfAccountPayableBusinessDebt = $_POST['txtSfAccountPayableBusinessDebt'];
+  echo $txtSfBankDebtFinancialObligation = $_POST['txtSfBankDebtFinancialObligation'];
+  echo $txtSfSocialDebtRemSocialBurdens = $_POST['txtSfSocialDebtRemSocialBurdens'];
+  echo $txtSfAccountPayableOhcsjd = $_POST['txtSfAccountPayableOhcsjd'];
+  echo $txtSfOtherCurrentLiabilities=$_POST["txtSfOtherCurrentLiabilities"];
+  echo $txtSfBankDebtLpLoans = $_POST['txtSfBankDebtLpLoans'];
+  echo $txtSfTaxSocialDebt = $_POST['txtSfTaxSocialDebt'];
+  echo $txtSfForecasts = $_POST['txtSfForecasts'];
+  echo $txtSfOtherPassive = $_POST['txtSfOtherPassive'];
+  echo '<br>';
+  $query = "UPDATE tbl_results set co_person_cost = $txtCoPersonCost, co_medical_fees='$txtCoMedicalFees', co_medication_cost = $txtCoMedicationCost, co_material_cost='$txtCoMaterialCost', 
+                  co_maintenance = $txtCoMaintenance, co_investigation_cost='$txtCoInvestigationCost', co_lab_cost = $txtCoLabCost, co_image_cost='$txtCoImageCost', co_intercenter_ohsjd_cost = $txtCoIntercenterOhsjdCost, 
+                  co_other_cost='$txtCoOtherCost', ga_person_admin_expenses = $txtGaPersonAdminExpenses, ga_professional_fees='$txtGaProfessionalFees', ga_bank_expenses = $txtGaBankExpenses, 
+                  ga_various_admin_sales_expenses='$txtGaVariousAdminSalesExpenses', ga_contributions_curia_community_expenses = $txtGaContributionsCuriaCommunityExpenses, ga_trial_legal_expenses='$txtGaTrialLegalExpenses', 
+                  ga_portfolio_impairment_provision = $txtGaPortfolioImpairmentProvision, ga_inventory_impairrment_provision='$txtGaInventoryImpairrmentProvision', ga_other_low_asset_provision = $txtGaOtherLowAssetProvision, 
+                  other_no_operating_income='$txtOtherNoOperatingIncome', other_no_operating_expenses = $txtOtherNoOperatingExpenses, interest_earned_net_exchange_difference='$txtInterestEarnedNetExchangeDifference', 
+                  interest_paid_third_parties_bank = $txtInterestPaidThirdPartiesBank, interest_paid_ohsjd='$txtInterestPaidOhsjd', sf_cash_bank = $txtSfCashBank, sf_accounts_receivable='$txtSfAccountsReceivable', 
+                  sf_inventory = $txtSfInventory, sf_other_current_asset='$txtSfOtherCurrentAsset', sf_non_current_investment = $txtSfNonCurrentInvestment, sf_property_plant_equipment='$txtSfPropertyPlantEquipment', 
+                  sf_other_asset = $txtSfOtherAsset, sf_account_payable_business_debt='$txtSfAccountPayableBusinessDebt', sf_bank_debt_financial_obligation = $txtSfBankDebtFinancialObligation, 
+                  sf_social_debt_rem_social_burdens='$txtSfSocialDebtRemSocialBurdens', sf_account_payable_ohcsjd = $txtSfAccountPayableOhcsjd, sf_other_current_liabilities='$txtSfOtherCurrentLiabilities', 
+                  sf_bank_debt_lp_loans = $txtSfBankDebtLpLoans, sf_tax_social_debt='$txtSfTaxSocialDebt', sf_forecasts = $txtSfForecasts, sf_other_passive='$txtSfOtherPassive'  
+          WHERE id_result='$txtIdResult'";
+  
+  $result = mysqli_query($conn, $query);
+  if (!$result) {
+  die('Error de consulta.');
+  }
+  header('Location: /finnapp/page/results');
+  } 
+
 ?>
