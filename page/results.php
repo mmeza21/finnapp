@@ -182,233 +182,242 @@
                                         <div class="modal-body">
                                             <div class="row">
                                                 <div class="col">
-                                                <input type="hidden" name="txtIdResult" id="txtIdResult" class="boxText"
+                                                <input type="hidden" name="txtIdResult" id="txtIdResult" class="boxTextModal"
                                                         value="<?php echo $idResult; ?>">
-                                                    <label for="txtCoPersonCost" class="lblText">C. Personal</label>
-                                                    <input type="text" name="txtCoPersonCost" id="txtCoPersonCost" class="boxText"
+                                                    <label for="txtCoPersonCost" class="lblTextModal">Costo personal</label>
+                                                    <input type="text" name="txtCoPersonCost" id="txtCoPersonCost" class="boxTextModal"
                                                         value="<?php echo $coPersonCost; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtCoMedicalFees" class="lblText">H. Médicos</label>
-                                                    <input type="text" name="txtCoMedicalFees" id="txtCoMedicalFees" class="boxText"
+                                                <label for="txtCoMedicalFees" class="lblTextModal">Honorarios médicos</label>
+                                                    <input type="text" name="txtCoMedicalFees" id="txtCoMedicalFees" class="boxTextModal"
                                                         value="<?php echo $coMedicalFees; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtCoMedicationCost" class="lblText">C. Médicación</label>
-                                                    <input type="text" name="txtCoMedicationCost" id="txtCoMedicationCost" class="boxText"
+                                                <label for="txtCoMedicationCost" class="lblTextModal">Costo medicamento</label>
+                                                    <input type="text" name="txtCoMedicationCost" id="txtCoMedicationCost" class="boxTextModal"
                                                         value="<?php echo $coMedicationCost;  ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtCoMaterialCost" class="lblText">C. Material</label>
-                                                    <input type="text" name="txtCoMaterialCost" id="txtCoMaterialCost" class="boxText"
+                                                <label for="txtCoMaterialCost" class="lblTextModal">Costo material</label>
+                                                    <input type="text" name="txtCoMaterialCost" id="txtCoMaterialCost" class="boxTextModal"
                                                         value="<?php echo $coMaterialCost;  ?>">
                                                 </div>
-                                                <div class="col">
-                                                <label for="txtCoMaintenance" class="lblText">Mantenimiento</label>
-                                                    <input type="text" name="txtCoMaintenance" id="txtCoMaintenance" class="boxText"
-                                                        value="<?php echo $coMaintenance;   ?>">
-                                                </div>
+      
                                             </div>
 
                                             <div class="row">
+                                            <div class="col">
+                                                <label for="txtCoMaintenance" class="lblTextModal">Mantenimiento</label>
+                                                    <input type="text" name="txtCoMaintenance" id="txtCoMaintenance" class="boxTextModal"
+                                                        value="<?php echo $coMaintenance;   ?>">
+                                                </div>
                                                 <div class="col">
-                                                    <label for="txtCoInvestigationCost" class="lblText">C. Investigación</label>
-                                                    <input type="text" name="txtCoInvestigationCost" id="txtCoInvestigationCost" class="boxText"
+                                                    <label for="txtCoInvestigationCost" class="lblTextModal">Costo investigación</label>
+                                                    <input type="text" name="txtCoInvestigationCost" id="txtCoInvestigationCost" class="boxTextModal"
                                                         value="<?php echo $coInvestigationCost; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtCoLabCost" class="lblText">C. Laboratorio</label>
-                                                    <input type="text" name="txtCoLabCost" id="txtCoLabCost" class="boxText"
+                                                <label for="txtCoLabCost" class="lblTextModal">Costo laboratorio</label>
+                                                    <input type="text" name="txtCoLabCost" id="txtCoLabCost" class="boxTextModal"
                                                         value="<?php echo $coLabCost; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtCoImageCost" class="lblText">C. Imagen</label>
-                                                    <input type="text" name="txtCoImageCost" id="txtCoImageCost" class="boxText"
+                                                <label for="txtCoImageCost" class="lblTextModal">Costo imagen</label>
+                                                    <input type="text" name="txtCoImageCost" id="txtCoImageCost" class="boxTextModal"
                                                         value="<?php echo $coImageCost;  ?>">
                                                 </div>
-                                                <div class="col">
-                                                <label for="txtCoIntercenterOhsjdCost" class="lblText">C. inter. OHSJD</label>
-                                                    <input type="text" name="txtCoIntercenterOhsjdCost" id="txtCoIntercenterOhsjdCost" class="boxText"
-                                                        value="<?php echo $coIntercenterOhsjdCost;   ?>">
-                                                </div>
+
                                             </div>
 
                                             <div class="row">
+                                            <div class="col">
+                                                <label for="txtCoIntercenterOhsjdCost" class="lblTextModal">Costo intercentro OHSJD</label>
+                                                    <input type="text" name="txtCoIntercenterOhsjdCost" id="txtCoIntercenterOhsjdCost" class="boxTextModal"
+                                                        value="<?php echo $coIntercenterOhsjdCost;   ?>">
+                                                </div>
                                                 <div class="col">
-                                                    <label for="txtCoOtherCost" class="lblText">C. Otros</label>
-                                                    <input type="text" name="txtCoOtherCost" id="txtCoOtherCost" class="boxText"
+                                                    <label for="txtCoOtherCost" class="lblTextModal">Otros costos</label>
+                                                    <input type="text" name="txtCoOtherCost" id="txtCoOtherCost" class="boxTextModal"
                                                         value="<?php echo $coOtherCost; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtGaPersonAdminExpenses" class="lblText">G. Personal adm</label>
-                                                    <input type="text" name="txtGaPersonAdminExpenses" id="txtGaPersonAdminExpenses" class="boxText"
+                                                <label for="txtGaPersonAdminExpenses" class="lblTextModal">Gasto personal adm</label>
+                                                    <input type="text" name="txtGaPersonAdminExpenses" id="txtGaPersonAdminExpenses" class="boxTextModal"
                                                         value="<?php echo $gaPersonAdminExpenses; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtGaProfessionalFees" class="lblText">H. Personal adm</label>
-                                                    <input type="text" name="txtGaProfessionalFees" id="txtGaProfessionalFees" class="boxText"
+                                                <label for="txtGaProfessionalFees" class="lblTextModal">Honorario profesional</label>
+                                                    <input type="text" name="txtGaProfessionalFees" id="txtGaProfessionalFees" class="boxTextModal"
                                                         value="<?php echo $gaProfessionalFees;  ?>">
                                                 </div>
-                                                <div class="col">
-                                                <label for="txtGaBankExpenses" class="lblText">G. Bancarios</label>
-                                                    <input type="text" name="txtGaBankExpenses" id="txtGaBankExpenses" class="boxText"
-                                                        value="<?php echo $gaBankExpenses;   ?>">
-                                                </div>
+   
                                             </div>
                                             
                                             <div class="row">
+                                            <div class="col">
+                                                <label for="txtGaBankExpenses" class="lblTextModal">Gasto bancario</label>
+                                                    <input type="text" name="txtGaBankExpenses" id="txtGaBankExpenses" class="boxTextModal"
+                                                        value="<?php echo $gaBankExpenses;   ?>">
+                                                </div>
                                                 <div class="col">
-                                                    <label for="txtGaVariousAdminSalesExpenses" class="lblText">G. varios adm y ventas</label>
-                                                    <input type="text" name="txtGaVariousAdminSalesExpenses" id="txtGaVariousAdminSalesExpenses" class="boxText"
+                                                    <label for="txtGaVariousAdminSalesExpenses" class="lblTextModal">Gasto varios y ventas</label>
+                                                    <input type="text" name="txtGaVariousAdminSalesExpenses" id="txtGaVariousAdminSalesExpenses" class="boxTextModal"
                                                         value="<?php echo $gaVariousAdminSalesExpenses; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtGaContributionsCuriaCommunityExpenses" class="lblText">Egresos aportes Curia</label>
-                                                    <input type="text" name="txtGaContributionsCuriaCommunityExpenses" id="txtGaContributionsCuriaCommunityExpenses" class="boxText"
+                                                <label for="txtGaContributionsCuriaCommunityExpenses" class="lblTextModal">Egresos aportes Curia</label>
+                                                    <input type="text" name="txtGaContributionsCuriaCommunityExpenses" id="txtGaContributionsCuriaCommunityExpenses" class="boxTextModal"
                                                         value="<?php echo $gaContributionsCuriaCommunityExpenses; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtGaTrialLegalExpenses" class="lblText">Juicio/Gastos legales</label>
-                                                    <input type="text" name="txtGaTrialLegalExpenses" id="txtGaTrialLegalExpenses" class="boxText"
+                                                <label for="txtGaTrialLegalExpenses" class="lblTextModal">Juicio/Gastos legales</label>
+                                                    <input type="text" name="txtGaTrialLegalExpenses" id="txtGaTrialLegalExpenses" class="boxTextModal"
                                                         value="<?php echo $gaTrialLegalExpenses;  ?>">
                                                 </div>
-                                                <div class="col">
-                                                <label for="txtGaPortfolioImpairmentProvision" class="lblText">P. deterioro cartera</label>
-                                                    <input type="text" name="txtGaPortfolioImpairmentProvision" id="txtGaPortfolioImpairmentProvision" class="boxText"
-                                                        value="<?php echo $gaPortfolioImpairmentProvision;   ?>">
-                                                </div>
+
                                             </div>
 
                                             <div class="row">
+                                            <div class="col">
+                                                <label for="txtGaPortfolioImpairmentProvision" class="lblTextModal">Provisión deterioro cartera</label>
+                                                    <input type="text" name="txtGaPortfolioImpairmentProvision" id="txtGaPortfolioImpairmentProvision" class="boxTextModal"
+                                                        value="<?php echo $gaPortfolioImpairmentProvision;   ?>">
+                                                </div>
                                                 <div class="col">
-                                                    <label for="txtGaInventoryImpairrmentProvision" class="lblText">Provisión de deterioro de inventarios</label>
-                                                    <input type="text" name="txtGaInventoryImpairrmentProvision" id="txtGaInventoryImpairrmentProvision" class="boxText"
+                                                    <label for="txtGaInventoryImpairrmentProvision" class="lblTextModal">Provisión deterioro inventarios</label>
+                                                    <input type="text" name="txtGaInventoryImpairrmentProvision" id="txtGaInventoryImpairrmentProvision" class="boxTextModal"
                                                         value="<?php echo $gaInventoryImpairrmentProvision; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtGaOtherLowAssetProvision" class="lblText">Provisión otros y bajo de activos</label>
-                                                    <input type="text" name="txtGaOtherLowAssetProvision" id="txtGaOtherLowAssetProvision" class="boxText"
+                                                <label for="txtGaOtherLowAssetProvision" class="lblTextModal">Provisión otros y bajo activos</label>
+                                                    <input type="text" name="txtGaOtherLowAssetProvision" id="txtGaOtherLowAssetProvision" class="boxTextModal"
                                                         value="<?php echo $gaOtherLowAssetProvision; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtOtherNoOperatingIncome" class="lblText">EBDITDA sin provisiones</label>
-                                                    <input type="text" name="txtOtherNoOperatingIncome" id="txtOtherNoOperatingIncome" class="boxText"
+                                                <label for="txtOtherNoOperatingIncome" class="lblTextModal">EBDITDA sin provisiones</label>
+                                                    <input type="text" name="txtOtherNoOperatingIncome" id="txtOtherNoOperatingIncome" class="boxTextModal"
                                                         value="<?php echo $otherNoOperatingIncome;  ?>">
                                                 </div>
-                                                <div class="col">
-                                                <label for="txtOtherNoOperatingExpenses" class="lblText">Margen EBDITDA</label>
-                                                    <input type="text" name="txtOtherNoOperatingExpenses" id="txtOtherNoOperatingExpenses" class="boxText"
-                                                        value="<?php echo $otherNoOperatingExpenses;   ?>">
-                                                </div>
+
                                             </div>
 
                                             <div class="row">
+                                            <div class="col">
+                                                <label for="txtOtherNoOperatingExpenses" class="lblTextModal">Margen EBDITDA</label>
+                                                    <input type="text" name="txtOtherNoOperatingExpenses" id="txtOtherNoOperatingExpenses" class="boxTextModal"
+                                                        value="<?php echo $otherNoOperatingExpenses;   ?>">
+                                                </div>
                                                 <div class="col">
-                                                    <label for="txtInterestEarnedNetExchangeDifference" class="lblText">Depreciaciones</label>
-                                                    <input type="text" name="txtInterestEarnedNetExchangeDifference" id="txtInterestEarnedNetExchangeDifference" class="boxText"
+                                                    <label for="txtInterestEarnedNetExchangeDifference" class="lblTextModal">Depreciaciones</label>
+                                                    <input type="text" name="txtInterestEarnedNetExchangeDifference" id="txtInterestEarnedNetExchangeDifference" class="boxTextModal"
                                                         value="<?php echo $interestEarnedNetExchangeDifference; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtInterestPaidThirdPartiesBank" class="lblText">Amortizaciones</label>
-                                                    <input type="text" name="txtInterestPaidThirdPartiesBank" id="txtInterestPaidThirdPartiesBank" class="boxText"
+                                                <label for="txtInterestPaidThirdPartiesBank" class="lblTextModal">Amortizaciones</label>
+                                                    <input type="text" name="txtInterestPaidThirdPartiesBank" id="txtInterestPaidThirdPartiesBank" class="boxTextModal"
                                                         value="<?php echo $interestPaidThirdPartiesBank; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtInterestPaidOhsjd" class="lblText">Exedente Operacional</label>
-                                                    <input type="text" name="txtInterestPaidOhsjd" id="txtInterestPaidOhsjd" class="boxText"
+                                                <label for="txtInterestPaidOhsjd" class="lblTextModal">Exedente Operacional</label>
+                                                    <input type="text" name="txtInterestPaidOhsjd" id="txtInterestPaidOhsjd" class="boxTextModal"
                                                         value="<?php echo $interestPaidOhsjd;  ?>">
                                                 </div>
-                                                <div class="col">
-                                                <label for="txtSfCashBank" class="lblText">Efectivo y banco</label>
-                                                    <input type="text" name="txtSfCashBank" id="txtSfCashBank" class="boxText"
-                                                        value="<?php echo $sfCashBank;   ?>">
-                                                </div>
+
                                             </div>
 
                                             <div class="row">
+                                            <div class="col">
+                                                <label for="txtSfCashBank" class="lblTextModal">Efectivo y banco</label>
+                                                    <input type="text" name="txtSfCashBank" id="txtSfCashBank" class="boxTextModal"
+                                                        value="<?php echo $sfCashBank;   ?>">
+                                                </div>
                                                 <div class="col">
-                                                    <label for="txtSfAccountsReceivable" class="lblText">Inversiones temporales</label>
-                                                    <input type="text" name="txtSfAccountsReceivable" id="txtSfAccountsReceivable" class="boxText"
+                                                    <label for="txtSfAccountsReceivable" class="lblTextModal">Inversiones temporales</label>
+                                                    <input type="text" name="txtSfAccountsReceivable" id="txtSfAccountsReceivable" class="boxTextModal"
                                                         value="<?php echo $sfAccountsReceivable; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtSfInventory" class="lblText">Cuentas por cobrar</label>
-                                                    <input type="text" name="txtSfInventory" id="txtSfInventory" class="boxText"
+                                                <label for="txtSfInventory" class="lblTextModal">Cuentas por cobrar</label>
+                                                    <input type="text" name="txtSfInventory" id="txtSfInventory" class="boxTextModal"
                                                         value="<?php echo $sfInventory; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtSfOtherCurrentAsset" class="lblText">Activo no corriente</label>
-                                                    <input type="text" name="txtSfOtherCurrentAsset" id="txtSfOtherCurrentAsset" class="boxText"
+                                                <label for="txtSfOtherCurrentAsset" class="lblTextModal">Activo no corriente</label>
+                                                    <input type="text" name="txtSfOtherCurrentAsset" id="txtSfOtherCurrentAsset" class="boxTextModal"
                                                         value="<?php echo $sfOtherCurrentAsset;  ?>">
                                                 </div>
-                                                <div class="col">
-                                                <label for="txtSfNonCurrentInvestment" class="lblText">Inversiones no corrientes</label>
-                                                    <input type="text" name="txtSfNonCurrentInvestment" id="txtSfNonCurrentInvestment" class="boxText"
-                                                        value="<?php echo $sfNonCurrentInvestment;   ?>">
-                                                </div>
+ 
                                             </div>
 
                                             <div class="row">
+                                            <div class="col">
+                                                <label for="txtSfNonCurrentInvestment" class="lblTextModal">Inversiones no corrientes</label>
+                                                    <input type="text" name="txtSfNonCurrentInvestment" id="txtSfNonCurrentInvestment" class="boxTextModal"
+                                                        value="<?php echo $sfNonCurrentInvestment;   ?>">
+                                                </div>
                                                 <div class="col">
-                                                    <label for="txtSfPropertyPlantEquipment" class="lblText">Propiedad planta y equipo</label>
-                                                    <input type="text" name="txtSfPropertyPlantEquipment" id="txtSfPropertyPlantEquipment" class="boxText"
+                                                    <label for="txtSfPropertyPlantEquipment" class="lblTextModal">Propiedad planta y equipo</label>
+                                                    <input type="text" name="txtSfPropertyPlantEquipment" id="txtSfPropertyPlantEquipment" class="boxTextModal"
                                                         value="<?php echo $sfPropertyPlantEquipment; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtSfOtherAsset" class="lblText">Otros activos</label>
-                                                    <input type="text" name="txtSfOtherAsset" id="txtSfOtherAsset" class="boxText"
+                                                <label for="txtSfOtherAsset" class="lblTextModal">Otros activos</label>
+                                                    <input type="text" name="txtSfOtherAsset" id="txtSfOtherAsset" class="boxTextModal"
                                                         value="<?php echo $sfOtherAsset; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtSfAccountPayableBusinessDebt" class="lblText">Cuentas por pagar deudas comerciales</label>
-                                                    <input type="text" name="txtSfAccountPayableBusinessDebt" id="txtSfAccountPayableBusinessDebt" class="boxText"
+                                                <label for="txtSfAccountPayableBusinessDebt" class="lblTextModal">Cuentas pagar deudas comerciales</label>
+                                                    <input type="text" name="txtSfAccountPayableBusinessDebt" id="txtSfAccountPayableBusinessDebt" class="boxTextModal"
                                                         value="<?php echo $sfAccountPayableBusinessDebt;  ?>">
                                                 </div>
-                                                <div class="col">
-                                                <label for="txtSfBankDebtFinancialObligation" class="lblText">Deudas bancarias, obligaciones financieras</label>
-                                                    <input type="text" name="txtSfBankDebtFinancialObligation" id="txtSfBankDebtFinancialObligation" class="boxText"
-                                                        value="<?php echo $sfBankDebtFinancialObligation;   ?>">
-                                                </div>
+
                                             </div>
 
                                             <div class="row">
+                                            <div class="col">
+                                                <label for="txtSfBankDebtFinancialObligation" class="lblTextModal">Deudas bancarias, obligaciones financieras</label>
+                                                    <input type="text" name="txtSfBankDebtFinancialObligation" id="txtSfBankDebtFinancialObligation" class="boxTextModal"
+                                                        value="<?php echo $sfBankDebtFinancialObligation;   ?>">
+                                                </div>
                                                 <div class="col">
-                                                    <label for="txtSfSocialDebtRemSocialBurdens" class="lblText">Deudas sociales rem y cargas sociales</label>
-                                                    <input type="text" name="txtSfSocialDebtRemSocialBurdens" id="txtSfSocialDebtRemSocialBurdens" class="boxText"
+                                                    <label for="txtSfSocialDebtRemSocialBurdens" class="lblTextModal">Deudas sociales rem y cargas sociales</label>
+                                                    <input type="text" name="txtSfSocialDebtRemSocialBurdens" id="txtSfSocialDebtRemSocialBurdens" class="boxTextModal"
                                                         value="<?php echo $sfSocialDebtRemSocialBurdens; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtSfAccountPayableOhcsjd" class="lblText">Cuentas por pagar OHSJD</label>
-                                                    <input type="text" name="txtSfAccountPayableOhcsjd" id="txtSfAccountPayableOhcsjd" class="boxText"
+                                                <label for="txtSfAccountPayableOhcsjd" class="lblTextModal">Cuentas por pagar OHSJD</label>
+                                                    <input type="text" name="txtSfAccountPayableOhcsjd" id="txtSfAccountPayableOhcsjd" class="boxTextModal"
                                                         value="<?php echo $sfAccountPayableOhcsjd; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtSfOtherCurrentLiabilities" class="lblText">Otros pasivos corrientes</label>
-                                                    <input type="text" name="txtSfOtherCurrentLiabilities" id="txtSfOtherCurrentLiabilities" class="boxText"
+                                                <label for="txtSfOtherCurrentLiabilities" class="lblTextModal">Otros pasivos corrientes</label>
+                                                    <input type="text" name="txtSfOtherCurrentLiabilities" id="txtSfOtherCurrentLiabilities" class="boxTextModal"
                                                         value="<?php echo $sfOtherCurrentLiabilities;  ?>">
                                                 </div>
-                                                <div class="col">
-                                                <label for="txtSfBankDebtLpLoans" class="lblText">Deudas bancarias, prestamo LP</label>
-                                                    <input type="text" name="txtSfBankDebtLpLoans" id="txtSfBankDebtLpLoans" class="boxText"
-                                                        value="<?php echo $sfBankDebtLpLoans;   ?>">
-                                                </div>
+
                             </div>
 
                             
                             <div class="row">
+                            <div class="col">
+                                                <label for="txtSfBankDebtLpLoans" class="lblTextModal">Deudas bancarias y prestamo LP</label>
+                                                    <input type="text" name="txtSfBankDebtLpLoans" id="txtSfBankDebtLpLoans" class="boxTextModal"
+                                                        value="<?php echo $sfBankDebtLpLoans;   ?>">
+                                                </div>
                                                 <div class="col">
-                                                    <label for="txtSfTaxSocialDebt" class="lblText">Deudas fiscales y sociales</label>
-                                                    <input type="text" name="txtSfTaxSocialDebt" id="txtSfTaxSocialDebt" class="boxText"
+                                                    <label for="txtSfTaxSocialDebt" class="lblTextModal">Deudas fiscales y sociales</label>
+                                                    <input type="text" name="txtSfTaxSocialDebt" id="txtSfTaxSocialDebt" class="boxTextModal"
                                                         value="<?php echo $sfTaxSocialDebt; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtSfForecasts" class="lblText">Previsiones</label>
-                                                    <input type="text" name="txtSfForecasts" id="txtSfForecasts" class="boxText"
+                                                <label for="txtSfForecasts" class="lblTextModal">Previsiones<br></label>
+                                                    <input type="text" name="txtSfForecasts" id="txtSfForecasts" class="boxTextModal"
                                                         value="<?php echo $sfForecasts; ?>">
                                                 </div>
                                                 <div class="col">
-                                                <label for="txtSfOtherPassive" class="lblText">Otros pasivos</label>
-                                                    <input type="text" name="txtSfOtherPassive" id="txtSfOtherPassive" class="boxText"
+                                                <label for="txtSfOtherPassive" class="lblTextModal">Otros pasivos</label>
+                                                    <input type="text" name="txtSfOtherPassive" id="txtSfOtherPassive" class="boxTextModal"
                                                         value="<?php echo $sfOtherPassive;  ?>">
                                                 </div>
         

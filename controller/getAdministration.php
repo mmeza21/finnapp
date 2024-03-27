@@ -7,7 +7,7 @@ $check = mysqli_query(
 $conn,
 "select * from tbl_rols where name_rol='$txtNameRol'"
 );
-/*Validar para que no se repitan los DNI*/
+/*Validar para que no se repitan el nombre roles*/
 $checkfila = mysqli_num_rows($check);
 if ($checkfila > 0) {
 echo "<script>alert('El rol se encuentra registrado');window.history.back();</script>";
@@ -17,7 +17,10 @@ $result = mysqli_query($conn, $query);
 if (!$result) {
 die('Error de consulta.');
 }
-header('Location: /finnapp/page/rols');
+echo ("<script LANGUAGE='JavaScript'>
+window.alert('Registro de rol exitosa');
+window.location.href='/finnapp/page/users';
+</script>");
 }
 /*Editar Rols*/
 } else if (isset($_POST['editRols'])) {
@@ -30,7 +33,10 @@ $result = mysqli_query($conn, $query);
 if (!$result) {
 die('Error de consulta.');
 }
-header('Location: /finnapp/page/rols');
+echo ("<script LANGUAGE='JavaScript'>
+window.alert('Actualización de rol exitosa');
+window.location.href='/finnapp/page/rols';
+</script>");
 }  
 /*Registrar Usuario*/
 else if (isset($_POST['saveUsers'])) {
@@ -44,7 +50,7 @@ else if (isset($_POST['saveUsers'])) {
   $conn,
   "select * from tbl_users where name_user='$txtNameUser' or email_user='$txtEmailUser'"
   );
-  /*Validar para que no se repitan los DNI*/
+  /*Validar para que no se repitan nombre de usuario*/
   $checkfila = mysqli_num_rows($check);
   if ($checkfila > 0) {
   echo "<script>alert('El usuario se encuentra registrado');window.history.back();</script>";
@@ -54,7 +60,10 @@ else if (isset($_POST['saveUsers'])) {
   if (!$result) {
   die('Error de consulta.');
   }
-  header('Location: /finnapp/page/users');
+  echo ("<script LANGUAGE='JavaScript'>
+  window.alert('Registro de usuario exitosa');
+  window.location.href='/finnapp/page/users';
+  </script>");
   }/*Editar Usuario*/
 } else if (isset($_POST['editUsers'])) {
   $txtNameUser = $_POST['txtNameUser'];
@@ -64,14 +73,16 @@ else if (isset($_POST['saveUsers'])) {
   $txtEmailUser = $_POST['txtEmailUser'];
   $sltNameRol = $_POST['sltNameRol'];
   $sltStateUser = $_POST['sltStateUser'];
-  echo $txtNameUser;
   $query = "UPDATE tbl_users set pass_user = '$txtPassUser', firts_name='$txtFirtsName', last_name='$txtLastName', statte_user=$sltStateUser, id_rol=$sltNameRol  WHERE name_user='$txtNameUser'";
   
   $result = mysqli_query($conn, $query);
   if (!$result) {
   die('Error de consulta.');
   }
-  header('Location: /finnapp/page/users');
+  echo ("<script LANGUAGE='JavaScript'>
+  window.alert('Actualización de usuario exitosa');
+  window.location.href='/finnapp/page/users';
+  </script>");
   }  
 /*Guardar CSV*/
 else if (isset($_POST['saveUploads'])) {
@@ -216,58 +227,61 @@ foreach ($lineas as $linea) {
         mysqli_query($conn, $insertar);
     }
 
-      echo '<div>'. $i. "). " .$linea.'</div>';
+      // echo '<div>'. $i. "). " .$linea.'</div>';
     $i++;
 }
 
 
   // echo '<p style="text-aling:center; color:#333;">Total de Registros: '. $cantidad_regist_agregados .'</p>';
-  header('Location: /finnapp/page/uploads');
+  // header('Location: /finnapp/page/uploads');
+  echo ("<script LANGUAGE='JavaScript'>
+  window.alert('Carga exitosa');
+  window.location.href='/finnapp/page/uploads';
+  </script>");
 }
 /*Editar Results*/
 else if (isset($_POST['editResults'])) {
-  echo $txtIdResult = $_POST['txtIdResult'];
-  echo $txtCoPersonCost = $_POST['txtCoPersonCost'];
-  echo $txtCoMedicalFees = $_POST['txtCoMedicalFees'];
-  echo $txtCoMedicationCost = $_POST['txtCoMedicationCost'];
-  echo $txtCoMaterialCost = $_POST['txtCoMaterialCost'];
-  echo $txtCoMaintenance = $_POST['txtCoMaintenance'];
-  echo $txtCoInvestigationCost = $_POST['txtCoInvestigationCost'];
-  echo $txtCoLabCost = $_POST['txtCoLabCost'];
-  echo $txtCoImageCost = $_POST['txtCoImageCost'];
-  echo $txtCoIntercenterOhsjdCost = $_POST['txtCoIntercenterOhsjdCost'];
-  echo $txtCoOtherCost = $_POST['txtCoOtherCost'];
-  echo $txtGaPersonAdminExpenses = $_POST['txtGaPersonAdminExpenses'];
-  echo $txtGaProfessionalFees = $_POST['txtGaProfessionalFees'];
-  echo $txtGaBankExpenses = $_POST['txtGaBankExpenses'];
-  echo $txtGaVariousAdminSalesExpenses = $_POST['txtGaVariousAdminSalesExpenses'];
-  echo $txtGaContributionsCuriaCommunityExpenses = $_POST['txtGaContributionsCuriaCommunityExpenses'];
-  echo $txtGaTrialLegalExpenses = $_POST['txtGaTrialLegalExpenses'];
-  echo $txtGaPortfolioImpairmentProvision = $_POST['txtGaPortfolioImpairmentProvision'];
-  echo $txtGaInventoryImpairrmentProvision = $_POST['txtGaInventoryImpairrmentProvision'];
-  echo $txtGaOtherLowAssetProvision = $_POST['txtGaOtherLowAssetProvision'];
-  echo $txtOtherNoOperatingIncome = $_POST['txtOtherNoOperatingIncome'];
-  echo $txtOtherNoOperatingExpenses = $_POST['txtOtherNoOperatingExpenses'];
-  echo $txtInterestEarnedNetExchangeDifference = $_POST['txtInterestEarnedNetExchangeDifference'];
-  echo $txtInterestPaidThirdPartiesBank = $_POST['txtInterestPaidThirdPartiesBank'];
-  echo $txtInterestPaidOhsjd = $_POST['txtInterestPaidOhsjd'];
-  echo $txtSfCashBank = $_POST['txtSfCashBank'];
-  echo $txtSfAccountsReceivable = $_POST['txtSfAccountsReceivable'];
-  echo $txtSfInventory = $_POST['txtSfInventory'];
-  echo $txtSfOtherCurrentAsset = $_POST['txtSfOtherCurrentAsset'];
-  echo $txtSfNonCurrentInvestment = $_POST['txtSfNonCurrentInvestment'];
-  echo $txtSfPropertyPlantEquipment = $_POST['txtSfPropertyPlantEquipment'];
-  echo $txtSfOtherAsset = $_POST['txtSfOtherAsset'];
-  echo $txtSfAccountPayableBusinessDebt = $_POST['txtSfAccountPayableBusinessDebt'];
-  echo $txtSfBankDebtFinancialObligation = $_POST['txtSfBankDebtFinancialObligation'];
-  echo $txtSfSocialDebtRemSocialBurdens = $_POST['txtSfSocialDebtRemSocialBurdens'];
-  echo $txtSfAccountPayableOhcsjd = $_POST['txtSfAccountPayableOhcsjd'];
-  echo $txtSfOtherCurrentLiabilities=$_POST["txtSfOtherCurrentLiabilities"];
-  echo $txtSfBankDebtLpLoans = $_POST['txtSfBankDebtLpLoans'];
-  echo $txtSfTaxSocialDebt = $_POST['txtSfTaxSocialDebt'];
-  echo $txtSfForecasts = $_POST['txtSfForecasts'];
-  echo $txtSfOtherPassive = $_POST['txtSfOtherPassive'];
-  echo '<br>';
+  $txtIdResult = $_POST['txtIdResult'];
+  $txtCoPersonCost = $_POST['txtCoPersonCost'];
+  $txtCoMedicalFees = $_POST['txtCoMedicalFees'];
+  $txtCoMedicationCost = $_POST['txtCoMedicationCost'];
+  $txtCoMaterialCost = $_POST['txtCoMaterialCost'];
+  $txtCoMaintenance = $_POST['txtCoMaintenance'];
+  $txtCoInvestigationCost = $_POST['txtCoInvestigationCost'];
+  $txtCoLabCost = $_POST['txtCoLabCost'];
+  $txtCoImageCost = $_POST['txtCoImageCost'];
+  $txtCoIntercenterOhsjdCost = $_POST['txtCoIntercenterOhsjdCost'];
+  $txtCoOtherCost = $_POST['txtCoOtherCost'];
+  $txtGaPersonAdminExpenses = $_POST['txtGaPersonAdminExpenses'];
+  $txtGaProfessionalFees = $_POST['txtGaProfessionalFees'];
+  $txtGaBankExpenses = $_POST['txtGaBankExpenses'];
+  $txtGaVariousAdminSalesExpenses = $_POST['txtGaVariousAdminSalesExpenses'];
+  $txtGaContributionsCuriaCommunityExpenses = $_POST['txtGaContributionsCuriaCommunityExpenses'];
+  $txtGaTrialLegalExpenses = $_POST['txtGaTrialLegalExpenses'];
+  $txtGaPortfolioImpairmentProvision = $_POST['txtGaPortfolioImpairmentProvision'];
+  $txtGaInventoryImpairrmentProvision = $_POST['txtGaInventoryImpairrmentProvision'];
+  $txtGaOtherLowAssetProvision = $_POST['txtGaOtherLowAssetProvision'];
+  $txtOtherNoOperatingIncome = $_POST['txtOtherNoOperatingIncome'];
+  $txtOtherNoOperatingExpenses = $_POST['txtOtherNoOperatingExpenses'];
+  $txtInterestEarnedNetExchangeDifference = $_POST['txtInterestEarnedNetExchangeDifference'];
+  $txtInterestPaidThirdPartiesBank = $_POST['txtInterestPaidThirdPartiesBank'];
+  $txtInterestPaidOhsjd = $_POST['txtInterestPaidOhsjd'];
+  $txtSfCashBank = $_POST['txtSfCashBank'];
+  $txtSfAccountsReceivable = $_POST['txtSfAccountsReceivable'];
+  $txtSfInventory = $_POST['txtSfInventory'];
+  $txtSfOtherCurrentAsset = $_POST['txtSfOtherCurrentAsset'];
+  $txtSfNonCurrentInvestment = $_POST['txtSfNonCurrentInvestment'];
+  $txtSfPropertyPlantEquipment = $_POST['txtSfPropertyPlantEquipment'];
+  $txtSfOtherAsset = $_POST['txtSfOtherAsset'];
+  $txtSfAccountPayableBusinessDebt = $_POST['txtSfAccountPayableBusinessDebt'];
+  $txtSfBankDebtFinancialObligation = $_POST['txtSfBankDebtFinancialObligation'];
+  $txtSfSocialDebtRemSocialBurdens = $_POST['txtSfSocialDebtRemSocialBurdens'];
+  $txtSfAccountPayableOhcsjd = $_POST['txtSfAccountPayableOhcsjd'];
+  $txtSfOtherCurrentLiabilities=$_POST["txtSfOtherCurrentLiabilities"];
+  $txtSfBankDebtLpLoans = $_POST['txtSfBankDebtLpLoans'];
+  $txtSfTaxSocialDebt = $_POST['txtSfTaxSocialDebt'];
+  $txtSfForecasts = $_POST['txtSfForecasts'];
+  $txtSfOtherPassive = $_POST['txtSfOtherPassive'];
   $query = "UPDATE tbl_results set co_person_cost = $txtCoPersonCost, co_medical_fees='$txtCoMedicalFees', co_medication_cost = $txtCoMedicationCost, co_material_cost='$txtCoMaterialCost', 
                   co_maintenance = $txtCoMaintenance, co_investigation_cost='$txtCoInvestigationCost', co_lab_cost = $txtCoLabCost, co_image_cost='$txtCoImageCost', co_intercenter_ohsjd_cost = $txtCoIntercenterOhsjdCost, 
                   co_other_cost='$txtCoOtherCost', ga_person_admin_expenses = $txtGaPersonAdminExpenses, ga_professional_fees='$txtGaProfessionalFees', ga_bank_expenses = $txtGaBankExpenses, 
@@ -285,7 +299,10 @@ else if (isset($_POST['editResults'])) {
   if (!$result) {
   die('Error de consulta.');
   }
-  header('Location: /finnapp/page/results');
+  echo ("<script LANGUAGE='JavaScript'>
+  window.alert('Actualización exitosa');
+  window.location.href='/finnapp/page/results';
+  </script>");
   } 
 
 ?>

@@ -74,6 +74,9 @@
         </section>
         <section class="login">
             <div class="contentLogin">
+                <figure>
+                    <img src="assets/images/logoGranada.png" alt="">
+                </figure>
                 <h1>Inicia sesión</h1>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="formulario">
                     <label for="txtUser">Usuario*</label>

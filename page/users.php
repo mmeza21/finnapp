@@ -92,10 +92,10 @@
                                                 <div class="col">
                                                     <label for="txtPassUser" class="lblText">Clave:</label>
                                                     <div class="contentEyePassword">
-                                                        <input type="password" name="txtPassUser" class="boxText"
+                                                        <input type="password" name="txtPassUser" id="txtPassUsers" class="boxText"
                                                             value="<?php echo $passUser; ?>" autocomplete="off">
                                                         <span id="eyePassword" class="eyePassword"
-                                                            onclick="toggleClave()"><i class="fas fa-eye"></i></span>
+                                                            onclick="toggleClaveEdit()"><i class="fas fa-eye"></i></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -192,7 +192,7 @@
                                                             class="boxText" required="true"
                                                             placeholder="Clave de usuario" autocomplete="off">
                                                         <span id="eyePassword" class="eyePassword"
-                                                            onclick="togglePassword()"><i
+                                                            onclick="toggleClaveRegister()"><i
                                                                 class="fas fa-eye textPrimaryColor"></i></span>
                                                     </div>
                                                 </div>
